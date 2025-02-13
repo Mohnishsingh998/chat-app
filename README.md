@@ -1,43 +1,39 @@
-🗨️ ChatSphere - Real-Time Chat Application
+# 🗨️ ChatSphere - Real-Time Chat Application
 
-ChatSphere is a real-time chat application built with React, Node.js, Express, MongoDB, and Socket.io. It supports OTP-based authentication, real-time messaging, and user status updates.
+ChatSphere is a real-time chat application built with **React, Node.js, Express, MongoDB, and Socket.io**. It supports **OTP-based authentication, real-time messaging, and user status updates**.
 
-🚀 Features
+## 🚀 Features
 
-✅ OTP-based Authentication (Login using Email & OTP verification)
-✅ Real-time messaging with Socket.io
-✅ User status updates (Online/Offline)
-✅ Protected Routes using JWT Authentication
-✅ Responsive UI with Tailwind CSS
-✅ Scalable backend using MVC architecture
+✅ OTP-based Authentication (Login using Email & OTP verification)\
+✅ Real-time messaging with **Socket.io**\
+✅ User status updates (Online/Offline)\
+✅ Protected Routes using JWT Authentication\
+✅ Responsive UI with **Tailwind CSS**\
+✅ Scalable backend using **MVC architecture**\
 ✅ Clean API routes & controllers
 
-🛠️ Tech Stack
+---
 
-Frontend
+## 🛠️ Tech Stack
 
-React.js (Vite for fast development)
+### **Frontend**
 
-React Router for navigation
+- React.js (Vite for fast development)
+- React Router for navigation
+- Axios for API calls
+- Socket.io-client for real-time communication
+- Zustand/Redux Toolkit for state management
+- Tailwind CSS for styling
 
-Axios for API calls
+### **Backend**
 
-Socket.io-client for real-time communication
+- Node.js & Express.js for API server
+- MongoDB & Mongoose for database
+- Socket.io for real-time chat
+- Nodemailer for OTP email verification
+- JWT for authentication
 
-Zustand/Redux Toolkit for state management
+---
 
-Tailwind CSS for styling
+## 📂 Project Structure
 
-Backend
-
-Node.js & Express.js for API server
-
-MongoDB & Mongoose for database
-
-Socket.io for real-time chat
-
-Nodemailer for OTP email verification
-
-JWT for authentication
-
-📂 Project Structure
