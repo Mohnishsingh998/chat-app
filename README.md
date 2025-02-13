@@ -35,22 +35,22 @@ ChatSphere is a real-time chat application built with **React, Node.js, Express,
 
 ---
 
-## 📂 Project Structure (These are major files)
+## 📂 Project Structure (These are major files)\
 
-📂 chat-application 
-┣ 📂 server 
-┃ ┣ 📂 models 
-┃ ┣ 📂 controllers 
-┃ ┣ 📂 routes 
-┃ ┣ 📜 index.js 
-┃ ┗ 📜 socket.js 
-┣ 📂 client
-┃ ┣ 📂 src 
-┃ ┃ ┣ 📂 components 
-┃ ┃ ┣ 📂 pages 
-┃ ┃ ┣ 📂 context 
-┃ ┃ ┣ 📂 services 
-┃ ┃ ┣ 📂 utils 
-┃ ┃ ┣ 📜 App.jsx 
-┃ ┃ ┣ 📜 main.jsx 
-┃ ┗ 📜 index.html
+📂 chat-application \
+┣ 📂 server \
+┃ ┣ 📂 models \
+┃ ┣ 📂 controllers \
+┃ ┣ 📂 routes \
+┃ ┣ 📜 index.js \
+┃ ┗ 📜 socket.js \
+┣ 📂 client\
+┃ ┣ 📂 src \
+┃ ┃ ┣ 📂 components \
+┃ ┃ ┣ 📂 pages \
+┃ ┃ ┣ 📂 context \
+┃ ┃ ┣ 📂 services \
+┃ ┃ ┣ 📂 utils \
+┃ ┃ ┣ 📜 App.jsx \
+┃ ┃ ┣ 📜 main.jsx \
+┃ ┗ 📜 index.html\
