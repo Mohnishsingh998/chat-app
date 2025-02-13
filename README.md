@@ -4,7 +4,13 @@ ChatSphere is a real-time chat application built with React, Node.js, Express, M
 
 🚀 Features
 
-✅ OTP-based Authentication (Login using Email & OTP verification)✅ Real-time messaging with Socket.io✅ User status updates (Online/Offline)✅ Protected Routes using JWT Authentication✅ Responsive UI with Tailwind CSS✅ Scalable backend using MVC architecture✅ Clean API routes & controllers
+✅ OTP-based Authentication (Login using Email & OTP verification)
+✅ Real-time messaging with Socket.io
+✅ User status updates (Online/Offline)
+✅ Protected Routes using JWT Authentication
+✅ Responsive UI with Tailwind CSS
+✅ Scalable backend using MVC architecture
+✅ Clean API routes & controllers
 
 🛠️ Tech Stack
 
