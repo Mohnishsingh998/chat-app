@@ -10,7 +10,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
+  "type": "commonjs",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.7",
@@ -18,7 +18,8 @@
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.10.0",
-    "socket.io": "^4.8.1"
+    "socket.io": "^4.8.1",
+    "twilio": "^5.4.4"
   },
   "devDependencies": {
     "nodemon": "^3.1.9"
