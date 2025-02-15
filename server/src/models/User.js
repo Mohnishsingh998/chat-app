@@ -7,9 +7,6 @@ const userSchema = new mongoose.Schema({
     password: { type: String },  // Optional if login is OTP-based
     profilePic: { type: String, default: "" },
     isOnline: { type: Boolean, default: false },
-    isVerified: { type: Boolean, default: false },  // Check if OTP is verified
-    otp: { type: String },  // Store OTP temporarily
-    otpExpiry: { type: Date },  // Expiry time for OTP
 }, { timestamps: true });
 
 const User = mongoose.model("User", userSchema);
