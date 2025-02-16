@@ -1,16 +1,15 @@
 const express = require("express");
 const cors = require("cors"); // Allow frontend requests
-const bodyParser = require("body-parser");
 require("dotenv").config();
 require("./utils/db");  // Connect to MongoDB
 const app = express();
-
-app.use(cors());
-app.use(bodyParser.json()); // Add this line to parse JSON
-app.use(express.urlencoded({ extended: true })); // For form data
-
 // Your routes
 const authRoutes = require("./routes/authRoutes");
+const cookieParser = require("cookie-parser");
+
+app.use(express.json());
+app.use(cookieParser());
+
 app.use("/api/auth", authRoutes);
 
 const PORT  = process.env.PORT;
