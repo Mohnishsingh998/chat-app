@@ -1,11 +1,10 @@
 const mongoose = require("mongoose");
 
 const messageSchema = new mongoose.Schema({
-  sender: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
-  chat: { type: mongoose.Schema.Types.ObjectId, ref: "Chat", required: true },  // Chat room ID
-  content: { type: String, required: true },  // Message text
-  messageType: { type: String, enum: ["text", "image", "video"], default: "text" }, // Message type
-  seenBy: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],  // Users who read the message
+  senderId: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },  // Sender of the message
+  receiverId: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },  // Receiver of the message
+  text: { type: String },  // Text content of the message
+  image: { type: String }, // Image URL
 }, { timestamps: true });
 
 const Message = mongoose.model("Message", messageSchema);
