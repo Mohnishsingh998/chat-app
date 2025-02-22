@@ -10,8 +10,10 @@ import {
   EyeOff,
   Eye,
   Loader,
+  Phone,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import toast from "react-hot-toast";
 
 const SignUpPage = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -22,9 +24,39 @@ const SignUpPage = () => {
   });
   const { signup, isSigningUp } = useAuthStore();
 
-  const validateForm = () => {};
+  const validateForm = () => {
+    console.log("Validating Form Data:", formData); // 🔍 Debugging Log
+  
+    if (!formData.name.trim()) {
+      toast.error("Name is required");
+      return false;
+    }
+    if (!formData.email.trim()) {
+      toast.error("Email is required");
+      return false;
+    }
+    if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      toast.error("Invalid email format");
+      return false;
+    }
+    if (!formData.password.trim()) {
+      toast.error("Password is required");
+      return false;
+    }
+    if (formData.password.length < 6) {
+      toast.error("Password must be at least 6 characters");
+      return false;
+    }
+  
+    return true; // ✅ Return true only if all validations pass
+  };
+  
+  
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log("Form Data Before Validation:", formData);
+    if (!validateForm()) return; // ✅ Prevent signup call on invalid data
+    signup(formData);
   };
   return (
     <div className="min-h-screen grid lg:grid-cols-2">
@@ -58,11 +90,28 @@ const SignUpPage = () => {
                   className="input input-bordered w-full pl-10"
                   placeholder="Name"
                   value={formData.name}
-                  onChange={(e) =>
-                    setFormData({ ...formData, name: e.target.value })
-                  }
+                  onChange={(e) => setFormData((prev) => ({ ...prev, name: e.target.value }))}
                 />
               </div>
+              
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text font-medium">Phone</span>
+              </label>
+              <div className="relative">
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <Phone className="size-5 text-base-content/40" />
+                </div>
+                <input
+                  type="text"
+                  className="input input-bordered w-full pl-10"
+                  placeholder="Phone-Number"
+                  value={formData.phone}
+                  onChange={(e) => setFormData((prev) => ({ ...prev, phone: e.target.value }))}
+                />
+              </div>
+              
             </div>
             <div className="form-control">
               <label className="label">
@@ -77,9 +126,7 @@ const SignUpPage = () => {
                   className="input input-bordered w-full pl-10"
                   placeholder="Email"
                   value={formData.email}
-                  onChange={(e) =>
-                    setFormData({ ...formData, email: e.target.value })
-                  }
+                  onChange={(e) => setFormData((prev) => ({ ...prev, email: e.target.value }))}
                 />
               </div>
             </div>
@@ -96,9 +143,7 @@ const SignUpPage = () => {
                   className="input input-bordered w-full pl-10"
                   placeholder="Password"
                   value={formData.password}
-                  onChange={(e) =>
-                    setFormData({ ...formData, password: e.target.value })
-                  }
+                  onChange={(e) => setFormData((prev) => ({ ...prev, password: e.target.value }))}
                 />
                 <button
                   type="button"

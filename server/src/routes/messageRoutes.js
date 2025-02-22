@@ -5,7 +5,7 @@ const messageRouter = express.Router();
 
 const { getUsersForMessages, getMessages, sendMessage } = require('../controllers/messageController');
 
-messageRouter.get("/user",protectRoute, getUsersForMessages);
+messageRouter.get("/users",protectRoute, getUsersForMessages);
 messageRouter.get("/:id",protectRoute, getMessages);
 messageRouter.post("/send/:id",protectRoute, sendMessage);
 

@@ -47,6 +47,7 @@ const signup = async (req, res) => {
       email: newUser.email,
       phone: newUser.phone,
       profilePic: newUser.profilePic,
+      createdAt :newUser.createdAt,
     });
   } catch (error) {
     console.error("Error in signup controller", error.message);
@@ -80,6 +81,7 @@ const login = async (req, res) => {
       email: user.email,
       phone: user.phone,
       profilePic: user.profilePic,
+      createdAt : user.createdAt,
     });
 
   } catch (error) {
@@ -114,13 +116,16 @@ const updateProfile = async (req,res)=>{
   }
 };
 
-const checkAuth = (req,res)=>{
+const checkAuth = async (req, res) => {
   try {
-    res.status(200).json(req.user);
+    if (!req.user) {
+      return res.status(401).json({ message: "Not authenticated" });
+    }
+    res.status(200).json({ user: req.user });
   } catch (error) {
-    console.error("Error in checkAuth controller", error.message);
+    console.error("Error in checkAuth route:", error.message);
     res.status(500).json({ message: "Internal server error" });
   }
-}
+  };
 
 module.exports = { signup, login, logout, updateProfile , checkAuth};
