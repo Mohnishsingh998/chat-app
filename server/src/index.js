@@ -23,7 +23,7 @@ app.use(
 
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
-const clientBuildPath = path.resolve(__dirname, "../client/dist");
+const clientBuildPath = path.resolve(__dirname, "/client/dist");
 const PORT = process.env.PORT;
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(clientBuildPath));
