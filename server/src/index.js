@@ -25,6 +25,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 
 const PORT = process.env.PORT;
+const __dirname = path.resolve();
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "/client/dist")));
   app.get("*", (req, res) => {
