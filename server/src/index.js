@@ -23,7 +23,8 @@ app.use(
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 
-const clientBuildPath = path.join(__dirname, "../client/dist");
+const clientBuildPath = path.join(__dirname, "../../client/dist");
+
 console.log("Serving frontend from:", clientBuildPath);
 
 const PORT = process.env.PORT || 3000;
