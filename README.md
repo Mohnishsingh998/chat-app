@@ -44,7 +44,7 @@ ChatSphere is a real-time chat application built with **React, Node.js, Express,
 ┃ ┃ ┣ 📂 routes\
 ┃ ┃ ┣ 📂 utils\
 ┃ ┗ 📜 index.js
-┣ 📂 client\
+┃ ┣ 📂 client\
 ┃ ┣ 📂 src \
 ┃ ┃ ┣ 📂 components \
 ┃ ┃ ┣ 📂 pages \
