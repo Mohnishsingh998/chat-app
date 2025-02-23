@@ -23,12 +23,12 @@ app.use(
 
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
-
+const clientBuildPath = path.resolve(__dirname, "../client/dist");
 const PORT = process.env.PORT;
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "/client/dist")));
+  app.use(express.static(clientBuildPath));
   app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "/client","dist","index.html"));
+    res.sendFile(path.join(clientBuildPath, "index.html"));
   });
 }
 server.listen(PORT, () => {
