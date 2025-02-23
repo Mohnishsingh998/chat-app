@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import NavBar from "./components/NavBar";
-import HomePage from './pages/HomePage';
+import HomePage from './pages/Homepage.jsx';
 import LogInPage from './pages/LogInPage.jsx';
-import SignUpPage from './pages/SignUpPage';
-import SettingsPage from './pages/SettingsPage';
-import ProfilePage from './pages/ProfilePage';
+import SignUpPage from './pages/SignUpPage.jsx';
+import SettingsPage from './pages/SettingsPage.jsx';
+import ProfilePage from './pages/ProfilePage.jsx';
 import { useAuthStore } from './store/useAuthStore.js';
 import { Loader } from 'lucide-react';
 import { Toaster } from 'react-hot-toast';
