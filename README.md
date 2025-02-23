@@ -1,6 +1,6 @@
 # 🗨️ ChatSphere - Real-Time Chat Application
 
-ChatSphere is a real-time chat application built with **React, Node.js, Express, MongoDB, and Socket.io**. It supports **real-time messaging, and user status updates**.
+ChatSphere is a real-time chat application built with **React, Node.js, Express, MongoDB, and Socket.io**. It supports **OTP-based authentication, real-time messaging, and user status updates**.
 
 ## 🚀 Features
 
@@ -22,7 +22,7 @@ ChatSphere is a real-time chat application built with **React, Node.js, Express,
 - React Router for navigation
 - Axios for API calls
 - Socket.io-client for real-time communication
-- Zustand Toolkit for state management
+- Zustand/Redux Toolkit for state management
 - Tailwind CSS for styling
 
 ### **Backend**
@@ -30,6 +30,7 @@ ChatSphere is a real-time chat application built with **React, Node.js, Express,
 - Node.js & Express.js for API server
 - MongoDB & Mongoose for database
 - Socket.io for real-time chat
+- Nodemailer for OTP email verification
 - JWT for authentication
 
 ---
@@ -37,10 +38,11 @@ ChatSphere is a real-time chat application built with **React, Node.js, Express,
 ## 📂 Project Structure (These are major files)\
 
 📂 chat-application \
-┣ ┣ 📂 src \
-┃ ┃ ┣ 📂 controllers \
-┃ ┃ ┣ 📂 middleware \
-┃ ┃ ┣ 📂 models \
+┣ 📂 server \
+┃ ┣ 📂 src\
+┃ ┃ ┣ 📂 controllers\
+┃ ┃ ┣ 📂 middleware\
+┃ ┃ ┣ 📂 models\
 ┃ ┃ ┣ 📂 routes\
 ┃ ┃ ┣ 📂 utils\
 ┃ ┗ 📜 index.js\
