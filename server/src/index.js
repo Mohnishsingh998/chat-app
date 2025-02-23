@@ -1,12 +1,11 @@
 const express = require("express");
-const cors = require("cors"); // Allow frontend requests
+const cors = require("cors");
 require("dotenv").config();
-require("cors")();
-require("./utils/db"); // Connect to MongoDB
+require("./utils/db");
 const { app, server } = require("./utils/socket");
 const path = require("path");
 
-// Your routes
+// Routes
 const authRoutes = require("./routes/authRoutes");
 const messageRoutes = require("./routes/messageRoutes");
 const cookieParser = require("cookie-parser");
@@ -16,21 +15,25 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(
   cors({
-    origin: process.env.CLIENT_URL, // Allow frontend to send requests to backend
-    credentials: true, // Allow frontend to send cookies to backend
+    origin: process.env.CLIENT_URL,
+    credentials: true,
   })
 );
 
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
-const clientBuildPath = path.resolve(__dirname, "/client/dist");
-const PORT = process.env.PORT;
+
+const clientBuildPath = path.join(__dirname, "../client/dist");
+console.log("Serving frontend from:", clientBuildPath);
+
+const PORT = process.env.PORT || 3000;
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(clientBuildPath));
   app.get("*", (req, res) => {
     res.sendFile(path.join(clientBuildPath, "index.html"));
   });
 }
+
 server.listen(PORT, () => {
-  console.log(`server is running at http://localhost:${PORT}`);
+  console.log(`Server is running at http://localhost:${PORT}`);
 });
