@@ -1,0 +1,22 @@
+{
+  "name": "chat-app",
+  "version": "1.0.0",
+  "description": "ChatSphere is a real-time chat application built with **React, Node.js, Express, MongoDB, and Socket.io**. It supports **real-time messaging, and user status updates**.",
+  "main": "index.js",
+  "scripts": {
+    "build" : "",
+    "start": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mohnishsingh998/chat-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Mohnishsingh998/chat-app/issues"
+  },
+  "homepage": "https://github.com/Mohnishsingh998/chat-app#readme"
+}
