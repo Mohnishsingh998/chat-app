@@ -4,7 +4,7 @@
   "description": "ChatSphere is a real-time chat application built with **React, Node.js, Express, MongoDB, and Socket.io**. It supports **real-time messaging, and user status updates**.",
   "main": "index.js",
   "scripts": {
-    "build" : "npm install --prefix server && npm install --prefix client && npm run build --prefix client",
+    "build" : "npm install --prefix server && npm install --prefix client && npm rebuild esbuild && npm run build --prefix client",
     "start": "npm run start --prefix server"
   },
   "repository": {
